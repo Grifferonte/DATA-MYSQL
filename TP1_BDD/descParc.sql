@@ -1,4 +1,4 @@
-use td1_bdd;
+use tp_bdd;
 
 describe Segment;
 describe Salle;

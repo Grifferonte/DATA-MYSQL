@@ -1,10 +1,10 @@
-use td1_bdd;
+use tp_bdd;
 
 create table Segment (
     indIp varchar(11),
     nomSegment varchar(20) not null ,
     etage tinyint(1),
-    constraint primary key (indIp)
+    constraint pk_indIp primary key (indIp)
 );
 
 create table Salle (
@@ -12,7 +12,7 @@ create table Salle (
     nomSalle varchar(20) not null ,
     nbPoste varchar(7),
     indIp varchar(11),
-    constraint primary key (nSalle)
+    constraint pk_nSalle primary key (nSalle)
     /**FOREIGN KEY (indIp) REFERENCES Segment(indIp)**/
 );
 
@@ -23,8 +23,8 @@ create table Poste (
     ad varchar(3),
     typePoste varchar(9),
     nSalle varchar(7),
-    constraint primary key (nPoste),
-    constraint ad check ( ad between 0 and 255)
+    constraint pk_nPoste primary key (nPoste),
+    constraint ck_ad check ( ad between 0 and 255)
     /**FOREIGN KEY (indIp) REFERENCES Segment(indIp),
     FOREIGN KEY (nSalle) REFERENCES Salle(nSalle)**/
 );
@@ -36,8 +36,8 @@ create table Logiciel (
     version varchar(7),
     typeLog varchar(9),
     prix decimal(6,2),
-    constraint  primary key (nLog),
-    constraint prix check ( prix>=0 )
+    constraint pk_nLog primary key (nLog),
+    constraint ck_prix check ( prix>=0 )
 );
 
 create table Installer (
@@ -46,7 +46,7 @@ create table Installer (
     numIns integer(5),
     dateIns timestamp default current_timestamp,
     delai smallint,
-    constraint primary key (numIns)
+    constraint pk_numIns primary key (numIns)
     /** FOREIGN KEY (nPoste) REFERENCES Poste(nPoste),
     FOREIGN KEY (nLog) REFERENCES Logiciel(nLog)**/
 );
@@ -54,5 +54,5 @@ create table Installer (
 create table Types (
     TypeLP varchar(9),
     nomType varchar(20),
-    constraint primary key (TypeLP)
+    constraint pk_TypeLP primary key (TypeLP)
 );
