@@ -1,0 +1,17 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "tp_bdd",
+            "database": "tp_bdd",
+            "username": "root",
+            "password": "Ft26@AlpS3"
+        }
+    ]
+}
