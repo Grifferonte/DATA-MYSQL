@@ -10,5 +10,7 @@ drop table Poste;
 drop table Logiciel;
 drop table Installer;
 drop table Types;
+drop table Softs;
+drop table PCSeuls;
 
 SET FOREIGN_KEY_CHECKS = 1;
