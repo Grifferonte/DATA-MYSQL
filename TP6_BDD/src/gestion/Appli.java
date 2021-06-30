@@ -1,6 +1,9 @@
 package gestion;
 
 import java.util.Iterator;
+
+import org.omg.CORBA.PRIVATE_MEMBER;
+
 import persistantData.Room;
 import persistantData.ItInfrastrcture;
 
